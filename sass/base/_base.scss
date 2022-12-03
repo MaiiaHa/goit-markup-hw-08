@@ -1,0 +1,13 @@
+body {
+  /* margin: 0; в боді автоматично є марджин, забирати його завжди, 
+  модерн нормалайз його автоматично додає 
+  тому не обов'язково його тут залишати */
+  background-color: var(--main-background-color);
+  font-family: var(--main-font);
+  color: var(--main-font-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+body.modal-open {
+  overflow: hidden;
+}

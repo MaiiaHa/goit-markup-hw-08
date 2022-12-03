@@ -1,0 +1,78 @@
+/* ================ MAIN SECTION (FIRST SECTION) ================*/
+.main-section {
+  margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  max-width: 1600px;
+
+  background-color: var(--footer-font);
+  background-size: cover; /* вписуєм зображення і обрізаєм */
+  background-repeat: no-repeat;
+  background-position: center;
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* тінь - фон */
+
+  @media screen and (min-width: $desctop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+  }
+
+  // ДО 480 ПІКСЕЛІВ MOBILE BACKGROUND
+
+  // mobile screen
+  background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+    url('../images/main/bg_sm@1x.jpg');
+  // mobile screen retina
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+      url('../images/main/bg_sm@2x.jpg');
+  }
+
+  // 481 I БІЛЬШЕ TABLET  BACKGROUND
+
+  @media screen and (min-width: 481px) {
+    // tablet screen
+    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+      url('../images/main/bg_md@1x.jpg');
+    // tablet screen retina
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+        url('../images/main/bg_md@2x.jpg');
+    }
+  }
+
+  // DESCTOP  BACKGROUND
+
+  @media screen and (min-width: 769px) {
+    // desctop screen
+    background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+      url('../images/main/bg_lg@1x.jpg');
+    // desctop screen retina
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(180deg, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.4)),
+        url('../images/main/bg_lg@2x.jpg');
+    }
+  }
+}
+
+.main-section__title {
+  margin-top: 0; /* скидаю марджин */
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  @include fonts(900, 26px, 42px, 0.06em);
+
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+
+  @media screen and (min-width: $tablet) {
+    width: 360px; /* ширина тексту основного */
+  }
+  @media screen and (min-width: $desctop) {
+    @include fonts(900, 44px, 60px, 0.06em);
+    width: 696px; /* ширина тексту основного */
+  }
+}

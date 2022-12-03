@@ -1,0 +1,39 @@
+@mixin fonts($fw: false, $fs: false, $lh: false, $ls: false) {
+  @if $fw {
+    font-weight: $fw;
+  }
+  @if $fs {
+    font-size: $fs;
+  }
+  @if $lh {
+    line-height: decimal-round($lh / $fs);
+  }
+  @if $ls {
+    letter-spacing: $ls;
+  }
+}
+
+$icons: 'antenna', 'clock', 'diagram', 'astronaut';
+
+@mixin generateIcons($icons) {
+  @each $iconName in $icons {
+    .benefits__item--#{$iconName}::before {
+      background-image: url('../images/icons-benefits/#{$iconName}.svg');
+    }
+  }
+}
+
+// fs і lh передаються обов'язково, а fw і ls не обовʼязково
+// якщо fw не false, то застосовується введене значення в тілі коду
+
+@mixin transitions($property: false, $duration: false, $timing: false) {
+  @if $property {
+    transition-property: $property;
+  }
+  @if $duration {
+    transition-duration: $duration;
+  }
+  @if $timing {
+    transition-timing-function: $timing;
+  }
+}

@@ -1,0 +1,107 @@
+// .btn {
+//   cursor: pointer; /* пальчик на кнопках */
+// }
+
+.main-section__btn {
+  @extend %btn;
+
+  /* inherit добавила*/
+  display: block;
+  padding: 10px 32px; /* відступи тексту на кнопці */
+  text-align: center;
+  min-width: 216px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: inherit;
+  @include fonts(700, 16px, 30px, 0.06em);
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--main-background-color);
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  border: none;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: var(--btn-bg-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.choice-btn:not(:last-child) {
+  @extend %btn;
+}
+.works-btn {
+  @extend %btn;
+
+  display: block;
+  padding: 6px 25px; /* відступи тексту на кнопці */
+  font-family: inherit; /* min-width: 73px; */
+
+  @include fonts(500, 16px, 26px, 0.03em);
+
+  text-align: center;
+  border-radius: 4px;
+  background-color: var(--section-color);
+  color: var(--main-font-color);
+  border: none;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--main-background-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.footer-btn {
+  @extend %btn;
+
+  position: relative;
+
+  width: 200px;
+  background-color: var(--accent-color);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  @include fonts(700, 16px, 30px, 0.06em);
+
+  align-items: center;
+  text-align: left;
+  color: var(--additional-font-color);
+
+  padding: 10px 28px;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-bg-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+.footer-mail-btn {
+  @extend %btn;
+
+  position: absolute;
+  top: 13px;
+  right: 28px;
+
+  fill: var(--main-background-color);
+}

@@ -1,0 +1,38 @@
+.logo {
+  font-family: var(--logo-font);
+  @include fonts(700, 24px, 28px, 0.03em);
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    @include fonts(700, 26px, 31px, 0.03em);
+  }
+
+  color: #000000;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &-first-part {
+    color: var(--accent-color);
+  }
+}
+.footer-logo {
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  color: var(--main-background-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

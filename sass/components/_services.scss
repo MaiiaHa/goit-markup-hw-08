@@ -1,0 +1,41 @@
+/* =================== SERVICES (OUR WORKS) ==================== */
+.services {
+  padding-top: 0;
+  padding-bottom: 94px;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+.services__list {
+  display: flex;
+}
+.services__item {
+  position: relative;
+}
+.services__item:not(:last-child) {
+  margin-right: 30px;
+}
+.servises__title {
+  margin-bottom: 50px;
+  @include fonts(700, 36px, 42px, 0.03em);
+
+  text-align: center;
+  color: var(--main-font-color);
+}
+.services__name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 70px;
+  @include fonts(700, 14px, 16px, false);
+
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--additional-font-color);
+  background-color: var(--services-font-cl);
+}

@@ -1,0 +1,102 @@
+/* =================== OUR BENEFITS SECTION ==================== */
+.benefits {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desctop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.benefits__list {
+  display: block;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    // gap: 30px;
+  }
+  @media screen and (min-width: $desctop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.benefits__item {
+  @media screen and (min-width: $tablet) {
+    max-width: 354px;
+  }
+  @media screen and (min-width: $desctop) {
+    max-width: 270px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    height: 120px;
+    background-color: var(--section-color);
+    border-radius: 4px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desctop) {
+      margin-right: 30px;
+      margin-bottom: 0px;
+    }
+  }
+
+  &:not(:nth-child(2n)) {
+    @media screen and (min-width: $tablet) {
+      margin-right: 30px;
+    }
+  }
+  &:nth-last-child(-n + 2) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@include generateIcons($icons);
+// .benefits__item--antenna::before {
+//   align-items: center;
+// }
+
+// .benefits__item--antenna::before {
+//   background-image: url('../images/antenna.svg');
+// }
+// .benefits__item--clock::before {
+//   background-image: url('../images/clock.svg');
+// }
+// .benefits__item--diagram::before {
+//   background-image: url('../images/diagram.svg');
+// }
+// .benefits__item--astronaut::before {
+//   background-image: url('../images/astronaut.svg');
+// }
+.benefits__title {
+  @include fonts(700, 14px, 16px, 0.03em);
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+  color: var(--main-font-color);
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+.benefits__content {
+  @include fonts(false, 14px, 24px, 0.03em);
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: var(--secondary-font-color);
+}

@@ -1,0 +1,31 @@
+// utiles styles
+@import './utils/variables';
+@import './utils/vhidden';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/decimals';
+@import './utils/breakpoints';
+
+// base styles
+@import './base/base';
+@import './base/reset';
+
+// components styles
+@import './components/header';
+@import './components/main-section';
+@import './components/logo';
+@import './components/buttons';
+@import './components/benefits';
+@import './components/container';
+
+@import './components/navigation';
+@import './components/services';
+@import './components/team-section';
+@import './components/clients-section';
+@import './components/footer';
+@import './components/modal';
+
+@import './components/works';
+@import './components/form';
+@import './components/social';
+@import './components/menue';

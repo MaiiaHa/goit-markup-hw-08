@@ -1,0 +1,106 @@
+/* ======================= HEADER NAV ========================= */
+.header {
+  border-bottom: 1px solid #ececec; /* рамка в нижній частині хедера */
+}
+
+.header-nav-list {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.header-list {
+  // position: relative;
+  display: flex;
+  align-items: center;
+}
+.nav-menu {
+  display: none;
+
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: 93px;
+  }
+}
+.header-nav {
+  display: flex;
+}
+.header-nav-link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px; /* розширюємо зону ховера і фокуса на навігації */
+  @include fonts(500, 14px, 16px, 0.02em);
+
+  color: var(--main-font-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  &.current {
+    color: var(--accent-color);
+  }
+}
+
+.header-link {
+  color: var(--secondary-font-color);
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px; /* розширюємо зону ховера і фокуса на навігації */
+  @include fonts(500, 14px, 16px, 0.02em);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: $tablet) {
+    @include fonts(500, 12px, 14px, 0.02em);
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor; /* наслідує колір батька як current так і ховер */
+}
+
+.nav-link {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    display: block;
+  }
+}
+
+.contact-nav:not(:last-child) {
+  margin-right: 30px;
+
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
+}
