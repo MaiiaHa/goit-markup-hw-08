@@ -50,7 +50,7 @@
 // навігація мобільного меню
 
 .mobile-nav-menu {
-  margin-bottom: 306px;
+  margin-bottom: auto;
 }
 .mobile-nav-list:not(:last-child) {
   padding-bottom: 32px;
@@ -143,10 +143,12 @@
 
 .menu-container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 32px;
   background-color: #fff;
   z-index: 999;
