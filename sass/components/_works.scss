@@ -127,12 +127,20 @@
   top: 0;
   left: 0;
   visibility: visible;
+
+  width: 100%;
+  height: 100%;
+
   @include fonts(false, 18px, 28px, 0.03em);
 
   background-color: var(--accent-color-cards);
   color: var(--main-background-color);
 
-  padding: 77px 24px;
+  padding: 15px;
+
+  @media screen and (min-width: $mobile) {
+    padding: 77px 24px;
+  }
 
   @media screen and (min-width: $tablet) {
     padding: 49px 24px 77px;
