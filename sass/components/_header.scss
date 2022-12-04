@@ -70,6 +70,9 @@
     padding-top: 0px;
     padding-bottom: 0px;
   }
+  @media screen and (min-width: $desctop) {
+    @include fonts(500, 14px, 16px, 0.02em);
+  }
 
   &:hover,
   &:focus {

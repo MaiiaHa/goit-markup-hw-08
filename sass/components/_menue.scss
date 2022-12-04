@@ -11,8 +11,9 @@
   padding-bottom: 32px;
 }
 .mobile-nav-link {
-  text-decoration-color: transparent;
+  // text-decoration-color: transparent;
   @include fonts(500, 40px, 47px, 0.02em);
+  color: var(--main-font-color);
 
   &:hover,
   &:focus {
@@ -43,8 +44,8 @@
 // посилання на соціальні сіті
 .mobile-social-list {
   display: flex;
-
-  @include fonts(500, 18px, 22px, 0.02em);
+  flex-wrap: wrap;
+  row-gap: 10px;
 
   color: var(--accent-color);
 }
@@ -59,6 +60,9 @@
   }
 }
 .mobile-social-link {
+  @include fonts(500, 18px, 22px, 0.02em);
+  color: var(--accent-color);
+
   &:hover,
   &:focus,
   &:active,
